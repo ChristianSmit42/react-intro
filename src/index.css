@@ -12,13 +12,4 @@ code {
     monospace;
 }
 
-.App{
-  background-color: #282c34;
-  color: white;
-}
-.List{
-  margin-left: 10px;
-  border: 2px solid white;
-  padding-left: 5px;
-  list-style-type: none;
-}
+
