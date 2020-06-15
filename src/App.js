@@ -9,16 +9,21 @@ const beers = ["beer1", "beer2", "beer3", "beer42"];
 const animals = ["beaver", "cow", "pig", "rat"];
 
 function App() {
-  return (
-    <div className="App">
-        <Header>Animals and Beer</Header>
-        <Main>
-            <List items={beers}></List>
-            <List items={animals}></List>
-        </Main>
-        <Footer>made with React</Footer>
-    </div>
-  );
+
+    const [itemsToDisplay, setItemsToDisplay] = React.useState(beers);
+    function handleClicks(){
+        setItemsToDisplay(animals);
+    }
+    return (
+        <div className="App">
+            <Header>Animals and Beer</Header>
+            <Main>
+                <button onClick={handleClicks}>change items</button>
+                <List items={itemsToDisplay}/>
+            </Main>
+            <Footer>made with React</Footer>
+        </div>
+    );
 }
 
 export default App;
